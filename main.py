@@ -1,8 +1,9 @@
 from PyPDF2 import PdfFileWriter, PdfFileReader
 import os
+import sys
 
-source_dir = '/Users/tobiassteggemann/Documents/thyssenkrupp/Upload Onepager'
-destination_dir = '/Users/tobiassteggemann/Documents/thyssenkrupp/Upload Onepager/only_first_page'
+source_dir = sys.argv[1]
+destination_dir = sys.argv[2]
 
 if not os.path.exists(destination_dir):
     os.makedirs(destination_dir)
